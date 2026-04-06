@@ -1,30 +1,60 @@
-# 🚗 KFZ Buchungssystem
+#  KFZ Buchungssystem
 
 A full-stack MERN application for booking car diagnostics and repair services.
 
-## 🌐 Live Demo
+---
+
+## 📸 Preview
+
+
+### 🏠 Homepage
+![Homepage](./screenshots/homepage.png)
+
+### 👤 Customer Dashboard
+![Customer](./screenshots/customerpage.png)
+
+### 🛠️ Workshop Creation
+![Workshop](./screenshots/new_werkstatt.png)
+
+### 👨‍🔧 Provider Profile
+![Provider](./screenshots/Providerprofile.png)
 
 ---
 
 ##  Features
 
--  User authentication (JWT)
--  Role-based access (customer / service provider)
--  Workshop management (create, update, delete)
--  Booking system with date & time selection
--  Notification system (booking updates)
--  Email confirmation (Mailtrap)
--  Modern UI with Material UI
+### Authentication & Roles
+- JWT-based authentication
+- Role-based access:
+  - Customer
+  - Service Provider
+
+### Workshop Management
+- Create, update, and delete workshops
+- Add services with price and duration
+- Manage availability (days and time slots)
+
+### Booking System
+- Book available time slots
+- Dynamic time slot generation
+- Prevent double bookings
+
+### Notifications
+- Customers receive updates when bookings are confirmed or cancelled
+- Service providers are notified when a new booking is created
+
+### Email System
+- Booking confirmation emails using Mailtrap
 
 ---
 
-##  Tech Stack
+## 🛠️ Tech Stack
 
 ### Frontend
 - React.js
 - React Router
 - Context API
-- Material UI
+- Material UI (MUI)
 - Axios
 
 ### Backend
@@ -36,21 +66,37 @@ A full-stack MERN application for booking car diagnostics and repair services.
 
 ---
 
+## 📁 Project Structure
+KFZ-Buchungssystem/
+├── client/
+├── Server/
+├── screenshots/
+└── README.md
+
+---
+
 ## ⚙️ Installation
 
-### 1. Clone the repository
+### Backend
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
-cd KFZ-Buchungssystem
+cd Server
+npm install
+npm start
+Frontend
+cd client
+npm install
+npm run dev
 
+ #### API Configuration
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
 
-#### Important
-
+⚠️ Notes
 This project is still under development.
 Some features and UI improvements are ongoing.
 
-👩‍💻 Author
 
-Hana Ouerghi
+Author
+
+Hanaa Ouerghi
 Fullstack Developer (React / Node.js)
